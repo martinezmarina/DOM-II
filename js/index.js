@@ -140,9 +140,36 @@ window.addEventListener("resize", function(event){
 ////////// resize End ///////////////
 
 ///////////// scroll ///////////////////
+const body = get("body")
+const home = get(".home")
 window.addEventListener("scroll", function(event){
-    console.log(window.scrollY);
+    if(window.scrollY <= 180){
+        body.style.backgroundColor = "white";
+        home.style.backgroundColor = "white";
+    } else if(window.scrollY >= 180 && window.scrollY <= 360){
+        body.style.backgroundColor = "mistyrose";
+        home.style.backgroundColor = "mistyrose";
+    } else if(window.scrollY >= 360 && window.scrollY <=540){
+        body.style.backgroundColor = "antiquewhite";
+        home.style.backgroundColor = "antiquewhite";
+    } else if(window.scrollY >= 540 && window.scrollY <=720){
+        body.style.backgroundColor = "ivory";
+        home.style.backgroundColor = "ivory";
+    } else if(window.scrollY >= 720 && window.scrollY <=900){
+        body.style.backgroundColor = "honeydew";
+        home.style.backgroundColor = "honeydew";
+    } else if(window.scrollY >= 900 && window.scrollY <=1080){
+        body.style.backgroundColor = "azure";
+        home.style.backgroundColor = "azure";
+    } else if(window.scrollY >= 1080 && window.scrollY <=1260){
+        body.style.backgroundColor = "aliceblue";
+        home.style.backgroundColor = "aliceblue";
+    }else if(window.scrollY >= 1260){
+        body.style.backgroundColor = "lavenderblush";
+        home.style.backgroundColor = "lavenderblush";
+    }
 })
+
 /////////// scroll end ////////////////
 
 //////////// select //////////////////
